@@ -1,0 +1,18 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Calisto MT";
+    color: #585858;
+    background-color: #AFF7FF;
+}
+
+#header {
+    background-color: #FEFEB6;
+    top: 0;
+    height: 120px;
+}
+
+#logo {
+    
+}
