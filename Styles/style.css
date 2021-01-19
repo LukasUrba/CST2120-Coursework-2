@@ -10,9 +10,58 @@ body {
 #header {
     background-color: #FEFEB6;
     top: 0;
-    height: 120px;
+    height: 121px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    float: left;
+    position: relative;
+}
+
+div ul li ul {
+    display: none;
+    position: absolute;
+}
+
+div ul li:hover ul {
+    display: block;
+}
+
+div ul li ul li {
+    width: 162px;
+}
+
+.headerLinks {
+    background-color: #FEFEDF;
+    border: 1px solid #C1C1C1;
+    display: block;
+    padding: 48px 60px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: white;
+}
+
+li a:visited, li a:link {
+    color: #585858;
+}
+
+#selected {
+    background-color: #DCDC97;
 }
 
 #logo {
-    
+    position: fixed;
+    width: 67.5px;
+    height: 67.5px;
+    top: 26.5px;
+    left: 49%;
 }

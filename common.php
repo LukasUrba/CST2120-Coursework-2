@@ -20,27 +20,36 @@ function webHeader($pageName) {
 
     $leftLinkNames = array("Home","Search");
     $leftLinkAddress = array("index.php","search.php");
-    //"Register", "Profile"
-    //"register.php","profile.php"
+
+    $dropDownNames = array("Profile","Login","Register");
+    $dropDownLinks = array("profile.php","#","register.php");
+
+    echo '<ul>';
     for($x = 0; $x < count($leftLinkNames); $x++) {
-        echo '<a class="headerLinks leftLinks" ';
+        echo '<li ><a class="headerLinks leftLinks" ';
         if ($leftLinkNames[$x] == $pageName){
             echo 'id="selected" ';
         }
-        echo 'href ="' .$leftLinkAddress[$x]. '">' .$leftLinkNames[$x]. '</a>';
+        echo 'href ="' .$leftLinkAddress[$x]. '">' .$leftLinkNames[$x]. '</a></li>';
     }
 
-    echo '<a class="headerLinks rigthLinks" ';
+    echo '<li style="float:right"><a class="headerLinks rigthLinks" ';
+    if($pageName == "Profile" || $pageName == "Register") {
+        echo 'id="selected" ';
+    }
+    echo 'href ="profile.php">User</a>';
+    echo '<ul>';
+    for ($x = 0; $x <count($dropDownNames); $x++) {
+        echo '<li><a class="dropdownLinks headerLinks" href="' .$dropDownLinks[$x]. '">' .$dropDownNames[$x]. '</a></li>';
+    }
+    echo '</ul>';
+
+    echo '<li style="float:right"><a class="headerLinks rigthLinks" ';
     if($pageName == "Basket") {
         echo 'id="selected" ';
     }
-    echo 'href ="basket.php">Basket</a>';
-
-    echo '<a class="headerLinks rigthLinks" ';
-    if($pageName == "Profile") {
-        echo 'id="selected" ';
-    }
-    echo 'href ="profile.php">Profile</a>';
+    echo 'href ="basket.php">Basket</a></li>';
+    echo '</ul>';
 
     echo '</div>';
 }
