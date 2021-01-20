@@ -1,9 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Contact Form</title>
-</head>
+<?php
+    include('common.php');
+    headData('Contact Page');
+    webHeader('Contact');
+
+if (isset($_POST{'submit'})){
+  $name = $_POST['name'];
+  $subject = $_POST['subject']; 
+  $mailFrom = $_POST['mail']; 
+  $message = $_POST['message'];  
+  
+  $mailTo = "blahblahblah@blah.com";
+  $headers = "From: ". $mailFrom;
+  $txt = "New email from  ".$name;.".\n\n".$message;
+
+  mail($mailTo, $subject, $txt, $headers);
+  header("Location: index.php?mailsend");
+}
+
+?>
+
 <body>
 
  <main>
@@ -16,5 +31,6 @@
     <button type="submit" name="submit">Send form</button>
  </main>
 
-</body>
-</html>
+<?php 
+    webFooter();
+?>
