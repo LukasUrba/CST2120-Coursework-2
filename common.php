@@ -21,8 +21,8 @@ function webHeader($pageName) {
     $leftLinkNames = array("Home","Search");
     $leftLinkAddress = array("index.php","search.php");
 
-    $dropDownNames = array("Profile","Login","Register");
-    $dropDownLinks = array("profile.php","#","register.php");
+    $dropDownNames = array("Profile","Login","Register","Admin");
+    $dropDownLinks = array("profile.php","#","register.php","#");
 
     echo '<ul>';
     for($x = 0; $x < count($leftLinkNames); $x++) {
@@ -60,16 +60,32 @@ function webFooter() {
     $pageLinks = array("index.php","search.php","basket.php","profile.php","register.php","contact.php");
 
     echo '<div id="footer">';
-    echo '<ul id="hyperlinks">';
+    echo '<ul class="hyperlinks">';
     for ($x = 0; $x < count($pageNames); $x++) {
         echo '<li class="hyperlinks"><a  href="' .$pageLinks[$x]. '">' .$pageNames[$x]. '</a></li>';
     }
     echo '</ul>';
 
-    echo '<div align="center" class="copyrightText">';
-    echo '<p>A</p>';
+    echo '<div id="copyrightText">';
+        echo'<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rhoncus, sapien in congue aliquam,
+                justo erat gravida mi, vitae consectetur ante lectus eget erat. Aliquam sodales pharetra magna, 
+                vel pharetra elit dapibus id. Nullam molestie ut dolor in sodales. 
+                Quisque maximus eget dolor laoreet varius. Aenean iaculis nisi tristique eros sodales dignissim. 
+                Sed tellus nisi, vulputate non quam ut, eleifend ultricies justo. Sed auctor scelerisque congue. 
+                Pellentesque convallis quis lacus sed congue.
+            </p>';
     echo '</div>';
+    
+    echo '<ul class="footerLogos">';
+        echo '<li><a href="https://github.com/">
+            <img  class="footerLogosEach" src="/Images/github-logo.png" alt="Github logo as a link"></a></li>';
+        echo '<li><a href="https://www.instagram.com/">
+            <img  class="footerLogosEach" src="/Images/insta-logo.png" alt="Instagram logo as a link"></a></li>';
+        echo '<li><a href="https://www.trustpilot.com/">
+            <img  id="trustpilot" class="footerLogosEach" src="/Images/trustpilot-logo.png" alt="Trustpilot logo as a link"></a></li>';       
+    echo '</ul>';
 
+    echo '</div>';
     echo '</body>';
     echo '</html>';
 }
