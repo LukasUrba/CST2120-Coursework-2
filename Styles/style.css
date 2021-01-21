@@ -11,7 +11,8 @@ body {
     background-color: #FEFEB6;
     position: fixed;
     width: 100%;
-    height: 121px;
+    height: 81px;
+    z-index: 100;
 }
 
 ul {
@@ -42,7 +43,7 @@ div ul li ul li {
     background-color: #FEFEDF;
     border: 1px solid #C1C1C1;
     display: block;
-    padding: 48px 60px;
+    padding: 28px 60px;
     font-size: 20px;
     text-decoration: none;
 }
@@ -63,7 +64,7 @@ div ul li ul li {
     position: absolute;
     width: 67.5px;
     height: 67.5px;
-    top: 26.5px;
+    top: 5px;
     left: 49%;
 }
 
@@ -82,7 +83,7 @@ div ul li ul li {
 
 #copyrightText {
     position:fixed;
-    left: 36%;
+    left: 30%;
     bottom: 0;
     text-align: center;
     width: 800px;
@@ -103,4 +104,227 @@ div ul li ul li {
 
 #trustpilot {
     width: 128px;
+}
+
+.reviews {
+    position:fixed;
+    font-size: 30px;
+    font: bolder;
+    left: 50px;
+    top: 110px;
+    padding: 0;
+    margin: 0;
+}
+
+.reviewImages {
+    width: 120px;
+    height: 67.5px;
+}
+
+.reviewTitle {
+    left: 130px;
+    bottom: 75px;
+    position: relative;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.reviewSentence {
+    font-size: 0.67em;
+    left: 130px;   
+    bottom: 75px;
+    position: relative;
+    display: flex;
+    margin: 0;
+}
+
+.star {
+    background: grey;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+}
+
+.checked {
+    background: yellow;
+}
+
+.allStars {
+    left: 130px;
+    bottom: 67px;
+    position: relative;
+    display: flex;
+}
+
+#pageTitle {
+    position: fixed;
+    left: 37.5%;
+    top: 60px;
+    font-weight: bolder;
+    font-size: 60px;
+}
+
+* {box-sizing:border-box}
+
+.slideshowContainer {
+    top: 170px;
+    max-width: 480px;
+    height: 270px;
+    position: relative;
+    margin: auto;
+}
+
+.slideshow {
+    display: none;
+}
+
+.picSet {
+    height: 240px;
+}
+
+.previous, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 45%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.previous:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.imageText {
+    color: #585858;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+.dot {
+    cursor: pointer;
+    position: relative;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    top: 150px;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+  
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+.imageText {
+    color: white;
+    left: 25%;
+    width: 50%;
+    background-color: black;
+    opacity: 50%;
+}
+
+.featuredHols {
+    position: relative;
+    font-size: 30px;
+    left: 40.75%;
+    top: 150px;
+    margin: 0;
+    padding: 0;
+    max-width: 600px;
+    max-height: 480px;
+}
+
+#featuredTitle {
+    font-weight: bolder;
+    left: 45%;
+}
+
+.featuredImages {
+    width: 120px;
+    height: 67.5px;
+}
+
+.featuredItemTitle {
+    position: relative;
+    font-size: 23px;
+    margin: 0;
+    padding: 0;
+    left: 130px;
+    bottom: 80px;
+}
+
+.featuredItemDesc {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    position: relative;
+    left: 130px;
+    bottom: 81px;
+}
+
+#seeMore {
+    font-size: 15px;
+    border: 1px solid #585858;
+    background-color: #DCDC97;
+    text-decoration: none;
+    color: #585858;
+    position: relative;
+    left: 300px;
+    bottom: 85px;
+}
+#seeMore a:visited, #seeMore a:link {
+    color: #585858;
+}
+
+#sideImage {
+    position: relative;
+    float: right;
+    right: 150px;
+    bottom: 700px;
+}
+
+#specialText {
+    text-align: center;
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0;
+    margin: 15px;
 }
