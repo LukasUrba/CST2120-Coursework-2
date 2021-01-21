@@ -11,7 +11,7 @@ if (isset($_POST{'submit'})){
   
   $mailTo = "blahblahblah@blah.com";
   $headers = "From: ". $mailFrom;
-  $txt = "New email from  ".$name;.".\n\n".$message;
+  $txt = "New email from  ".$name.".\n\n".$message;
 
   mail($mailTo, $subject, $txt, $headers);
   header("Location: index.php?mailsend");
